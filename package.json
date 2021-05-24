@@ -1,0 +1,23 @@
+
+{                                                                                
+  "name": "be.eloistree.etherfundinglotterynethandetherscan",                              
+  "displayName": "Ehter Funding Loterry Nether and EtherScan API",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "Link Ether scan and Nether to Ether Funding Lottery ",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples" : [],     
+  "author" : {
+"name":"",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/EloiStree/2021_05_22_EthFundingLotteryWithNetherAndEthScan.git",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 

@@ -38,14 +38,14 @@ public class EthscanRequest_TransactionOfToLotteryEntry : MonoBehaviour
     {
         EthScanRequest_GetWalletTransaction transactions = arg0 as EthScanRequest_GetWalletTransaction;
         if (transactions != null) {
-            transactions.GetTransactionInformatoin(out List<EthScanRequest_GetWalletTransaction.Json_Transaction> trans);
+            transactions.GetTransactionInformation(out List<EthScanRequest_GetWalletTransaction.Json_Transaction> trans);
             List<Transaction> t= new List<Transaction>();
             trans.Reverse();
             foreach (var item in trans)
             {
-                if ( item.GetHash().IndexOf(m_transactionStart) >= 0)
+                if ( item.GetTransactionHash().IndexOf(m_transactionStart) >= 0)
                     break;
-                t.Add(new Transaction(item.GetHash(), item.GetFromWallet(), item.GetToWallet(), string.Format("{0:0}",  item.GetValueInWei())));
+                t.Add(new Transaction(item.GetTransactionHash(), item.GetFromWallet(), item.GetToWallet(), string.Format("{0:0}",  item.GetValueInWei())));
                
             }
             m_lotteryComputeEntry.SetEntry(t, true);

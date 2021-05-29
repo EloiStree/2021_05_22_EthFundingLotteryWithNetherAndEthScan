@@ -99,5 +99,16 @@ public class LF_InitialLotteryParameters
                 int.Parse(minute),
                 int.Parse(second));
         }
+
+        public void SetTimestampInSecondsUtc(ulong timestampInsecond)
+        {
+            DateTime d = new DateTime(1970, 1, 1).AddSeconds(timestampInsecond);
+            year = "" + d.Year;
+            month = "" + d.Month;
+            day = "" + d.Day;
+            hour = "" + d.Hour;
+            minute = "" + d.Minute;
+            second = "" + d.Second;
+        }
     }
 }

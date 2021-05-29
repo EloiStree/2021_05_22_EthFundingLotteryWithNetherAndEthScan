@@ -123,6 +123,11 @@ public class LotteryFundingStateMachineChecker : MonoBehaviour
              .Reverse().Select(k=>k.GetTransactionIdHash()).ToArray();
 
 
+        if (participantsInJoinOrder.Length <= 0) { 
+            Append("Not enough participants to compute. ");
+            yield  break;
+        }
+        
         Append("Start computing winner");
         CryptoDontTrustVerifyWinnerAlogrithm.ComputeWinnerIndexOf(
             "", startingTransactionHash,

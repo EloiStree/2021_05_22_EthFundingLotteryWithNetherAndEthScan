@@ -60,7 +60,7 @@ public class UI_LotteryEntrySaveAndLoad : MonoBehaviour
         m_fundingAddress.text = m_initParams.m_lotteryData.m_fundingAddress;
         m_pourcentToFunding.text =string.Format( "{0:0.0}", m_initParams.m_lotteryData.m_pourcentToFunding * 100.0); 
         m_transactionWinnerCount.text =""+ m_initParams.m_lotteryData.m_numberOfTransactionsUsedToComputeWinner;
-        m_serverTarget.SetValueWithoutNotify( m_initParams.m_lotteryData.m_serverTarget == EtherServerTarget.Mainset ?0:1);
+        m_serverTarget.SetValueWithoutNotify( m_initParams.m_lotteryData.m_serverTarget == EtherServerTarget.Mainnet ?0:1);
 
         m_year.text = m_initParams.m_lotteryData.m_outOfTimeCondition.year;
         m_month.text = m_initParams.m_lotteryData.m_outOfTimeCondition.month;
@@ -91,7 +91,7 @@ public class UI_LotteryEntrySaveAndLoad : MonoBehaviour
         m_initParams.m_lotteryData.m_pourcentToFunding = pourcent/100.0;
         uint.TryParse(m_transactionWinnerCount.text, out uint transactionCount);
          m_initParams.m_lotteryData.m_numberOfTransactionsUsedToComputeWinner = transactionCount;
-        m_initParams.m_lotteryData.m_serverTarget = m_serverTarget.value == 0 ? EtherServerTarget.Mainset : EtherServerTarget.Ropsten;
+        m_initParams.m_lotteryData.m_serverTarget = m_serverTarget.value == 0 ? EtherServerTarget.Mainnet : EtherServerTarget.Ropsten;
 
         int value = 0; ;
         int.TryParse(m_year.text, out value);

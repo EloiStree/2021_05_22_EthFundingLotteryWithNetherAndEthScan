@@ -89,7 +89,7 @@ public class EhterumLotteryMassiveDetails
     public void GetFundingAmount(out decimal weiAmount, out double ethApprixmation)
     {
         GetContestTotaleAmount(out decimal amount, out double apprixmation);
-        weiAmount = (amount * (decimal)(1.0-m_initialParametersOfLottery.m_pourcentToFunding) ); 
+        weiAmount = (amount * (decimal)(m_initialParametersOfLottery.m_pourcentToFunding) ); 
         EthereumConverttion.ApproximateConvert(weiAmount, out decimal eth, EtherType.Wei, EtherType.Ether);
         ethApprixmation = (double)eth;
 

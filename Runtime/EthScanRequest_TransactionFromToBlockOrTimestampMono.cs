@@ -10,7 +10,7 @@ public class EthScanRequest_TransactionFromToBlockOrTimestampMono : MonoBehaviou
 
     public string m_startTransaction;
     public string m_targetAddess;
-    public PublicRequestKeyAPIAbstract m_apiToken;
+    public PrivateRequestKeyAPIAbstract m_apiToken;
     public Experiment_EtherRequestAntiSpamAPI m_antiSpam;
 
     public UnityEvent m_walletHistoryFetchEvent;

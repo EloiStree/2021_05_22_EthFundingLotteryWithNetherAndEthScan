@@ -17,7 +17,7 @@ public class TextToLotteryInitParams : MonoBehaviour
     public EtherServerTarget m_targetServer;
 
     public Experiment_EtherRequestAntiSpamAPI m_antiSpam;
-    public PublicRequestKeyAPIAbstract m_etherScanKey;
+    public PrivateRequestKeyAPIAbstract m_etherScanKey;
     public EthScanRequest_GetJsonTransactionInformation m_transaction;
     public EthScanRequest_GetJsonBlockInformation m_blockFetch;
 
